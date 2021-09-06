@@ -1,3 +1,17 @@
+/*
+ *  UCF COP3330 Fall 2021 Assignment 5 Solution
+ *  Copyright 2021 Richard Lopez
+ */
+
+/*
+    1. Input Scanner
+    2. Ask for first number
+    3. Scan for number
+    4. Repeat for second number
+    5. Make Sum, Difference, Product, Quotient with numbers given
+    6. Output results using the variables made
+*/
+
 package exercise05;
 
 import java.util.Scanner;
@@ -8,21 +22,23 @@ public class Solution05 {
 
     public static void main(String[] args){
         System.out.print("What is the first number? ");
-        int firstNumber = in.nextInt();
+        String firstNumber = in.nextLine();
 
         System.out.print("What is the second number? ");
-        int secondNumber = in.nextInt();
+        String secondNumber = in.nextLine();
 
-        int sum = firstNumber + secondNumber;
-        int difference = firstNumber - secondNumber;
-        int product = firstNumber * secondNumber;
-        int quotient = firstNumber / secondNumber;
+        int firstNum = Integer.parseInt(firstNumber);
+        int secondNum = Integer.parseInt(secondNumber);
 
-        System.out.println(firstNumber + " + " + secondNumber + " = " + sum);
-        System.out.println(firstNumber + " - " + secondNumber + " = " + difference);
-        System.out.println(firstNumber + " * " + secondNumber +  " = " + product);
-        System.out.println(firstNumber + " / " + secondNumber + " = " + quotient);
+        int sum = firstNum + secondNum;
+        int difference = firstNum - secondNum;
+        int product = firstNum * secondNum;
+        int quotient = firstNum / secondNum;
 
+        System.out.println(firstNumber + " + " + secondNumber + " = " + sum +
+                "\n" + firstNumber + " - " + secondNumber + " = " + difference +
+                "\n" + firstNumber + " * " + secondNumber +  " = " + product +
+                "\n" + firstNumber + " / " + secondNumber + " = " + quotient);
     }
 
 }
